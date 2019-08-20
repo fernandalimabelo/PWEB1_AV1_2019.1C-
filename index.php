@@ -34,30 +34,30 @@
 
 <div class="container-contact100">
     <div class="wrap-contact100">
-        <form class="contact100-form validate-form">
+        <form class="contact100-form validate-form" action="atendimento/novo.php" method="POST">
 				<span class="contact100-form-title">
 					Atendimento ao Cliente
 				</span>
 
             <div class="wrap-input100  bg1">
                 <span class="label-input100">Nome completo *</span>
-                <input class="input100" type="text" placeholder="Digite seu nome completo">
+                <input class="input100" type="text" placeholder="Digite seu nome completo" name="nome"/>
             </div>
 
             <div class="wrap-input100  bg1 rs1-wrap-input100">
                 <span class="label-input100">Email *</span>
-                <input class="input100" type="text" placeholder="Digite seu e-mail ">
+                <input class="input100" type="text" placeholder="Digite seu e-mail " name="email"/>
             </div>
 
             <div class="wrap-input100 bg1 rs1-wrap-input100">
                 <span class="label-input100">Telefone</span>
-                <input class="input100" type="text" placeholder="(DD) 9 XXXX-XXXX">
+                <input class="input100" type="text" placeholder="(DD) 9 XXXX-XXXX" name="telefone"/>
             </div>
 
             <div class="wrap-input100 input100-select bg1">
                 <span class="label-input100">Tipo de mensagem *</span>
                 <div>
-                    <select class="js-select2">
+                    <select class="js-select2" id="opcao" name="opcao">
                         <option>Escolha uma opção</option>
                         <option>Elogio</option>
                         <option>Crítica</option>
@@ -71,10 +71,10 @@
             <div class="wrap-input100 bg1 rs1-wrap-input100">
                 <span class="label-input100">Tipo de cliente *</span><br/>
                 <label class="input100">
-                    <input type="radio"> Novo cliente
+                    <input type="radio" value="novo-cliente" name="tipo_cliente"> Novo cliente
                 </label>
                 <label class="input100">
-                    <input type="radio"> Cliente antigo
+                    <input type="radio" value="antigo-cliente" name="tipo_cliente"> Cliente antigo
                 </label>
             </div>
 
@@ -82,13 +82,13 @@
                 <span class="label-input100">Deseja receber ligação?</span><br/>
                 <br/>
                 <label class="input100">
-                    <input type="checkbox"> Sim, pode me ligar
+                    <input type="checkbox" id="agree" name="confirmar"/> Sim, pode me ligar
                 </label>
             </div>
 
             <div class="wrap-input100  bg0 ">
                 <span class="label-input100">Mensagem do cliente *</span>
-                <textarea class="input100" placeholder="Escreva sua mensagem aqui..."></textarea>
+                <textarea class="input100" placeholder="Escreva sua mensagem aqui..." name="mensagem_cliente"></textarea>
             </div>
 
             <div class="container-contact100-form-btn">
